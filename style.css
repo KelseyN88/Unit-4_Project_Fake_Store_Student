@@ -20,13 +20,26 @@ body {
     margin-top: auto;
 }
 
+h3 {
+    font-size: 1rem;
+}
+
+.accordion-button {
+    background-color: orange;
+}
+
+.btn-text {
+    text-align: center;
+}
+
 footer {
-   
+    /* display: block; */
     background-color: #000;
     color: white;
     position: fixed;
     width: 100vw;
     bottom: 0;
+    left: 0;
     margin: auto;
 }
 
