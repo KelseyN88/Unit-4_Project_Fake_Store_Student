@@ -1,11 +1,10 @@
 body {
     display: flex;
-    align-items: center;
+    justify-content: center;
     flex-direction: column;
+    align-items: center;
     overflow-x: hidden;
     background-color: #FEFAE0;
-    
-  
 }
 
 .navbar {
@@ -15,10 +14,15 @@ body {
 }
 
 #display {
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
     width: 100vw;
     text-align: center;
     margin-top: auto;
 }
+
+
 
 h3 {
     font-size: 1rem;

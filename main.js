@@ -63,7 +63,7 @@ const accordionButton1 = document.createElement('button');
 const accordionCollapse1 = document.createElement('div');
 const accordionBody1 = document.createElement('div');
 
-const accordionDiv2 = document.createElement('div');
+const accordionDiv2 = document.createElement('div'); // was not reading
 const accordionItem2 = document.createElement('div');
 const accordionHeader2 = document.createElement('h2');
 const accordionButton2 = document.createElement('button');
@@ -102,6 +102,8 @@ accordionCollapse1.classList.add('accordion-collapse', 'collapse');
 accordionCollapse1.setAttribute('data-bs-parent', '#accordionExample');
 accordionBody1.classList.add('accordion-body');
 
+accordionDiv2.classList.add('accordion'); // added
+accordionDiv2.id = 'accordionExample'; // added
 accordionItem2.classList.add('accordion-item');
 accordionHeader2.classList.add('accordion-header');
 accordionButton2.classList.add('accordion-button', 'collapsed');
@@ -117,9 +119,8 @@ addToCartButton.textContent = 'Add To Cart';
 
 cardImage.src = item.image;
 cardTitle.textContent = item.title;
-cardText.textContent = item.description;
-placeholderText1.textContent = 'Placeholder Text';
-placeholderText2.textContent = 'Placeholder Text';
+placeholderText1.textContent = `${item.description}`;
+placeholderText2.textContent = `${item.price}`;
 
 accordionButton1.textContent = 'Description';
 accordionButton1.setAttribute('data-bs-target', `#collapse${item.id}`);
@@ -143,6 +144,9 @@ accordionHeader2.appendChild(accordionButton2);
 accordionItem2.appendChild(accordionHeader2);
 accordionItem2.appendChild(accordionCollapse2);
 
+accordionDiv2.appendChild(accordionItem1) // added
+accordionDiv2.appendChild(accordionItem2) // added
+
 accordionDiv.appendChild(accordionItem1);
 accordionDiv.appendChild(accordionItem2);
 
@@ -154,8 +158,8 @@ cardDiv.appendChild(cardImage);
 cardDiv.appendChild(cardBodyDiv);
 columnDiv.appendChild(cardDiv);
 innerDiv.appendChild(columnDiv);
-displayDiv.appendChild(innerDiv);
-document.body.appendChild(displayDiv);
+displayDiv.appendChild(innerDiv)
+document.body.appendChild(displayDiv)
 })
 
 }
