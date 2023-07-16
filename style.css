@@ -14,8 +14,8 @@ body {
 }
 
 #display {
-    flex-direction: column;
-    display: flex;
+    /* flex-direction: column; */
+    /* display: flex; */
     flex-wrap: wrap;
     width: 100vw;
     text-align: center;

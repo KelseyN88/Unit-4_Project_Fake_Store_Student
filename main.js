@@ -46,7 +46,7 @@ const displayCards = () => {
 storedItems.forEach(item => {
 
 // Create elements
-const displayDiv = document.createElement('div');
+// const displayDiv = document.createElement('div');
 const innerDiv = document.createElement('div');
 const columnDiv = document.createElement('div');
 
@@ -77,10 +77,10 @@ const addToCartButton = document.createElement('button');
 
 
 // Set Attributes
-displayDiv.id = 'display';
+// displayDiv.className = 'display';
 // found .classList and it seemed helpful for manipulating classes easily, especially for accordian
-innerDiv.classList.add('row', 'row-cols-1', 'row-cols-md-2', 'g-4');
-innerDiv.style.maxWidth = '36rem';
+// innerDiv.classList.add('row', 'row-cols-1', 'row-cols-md-2', 'g-4');
+// innerDiv.style.maxWidth = '36rem';
 columnDiv.classList.add('col');
 
 cardDiv.classList.add('card');
@@ -158,8 +158,9 @@ cardDiv.appendChild(cardImage);
 cardDiv.appendChild(cardBodyDiv);
 columnDiv.appendChild(cardDiv);
 innerDiv.appendChild(columnDiv);
-displayDiv.appendChild(innerDiv)
-document.body.appendChild(displayDiv)
+// displayDiv.appendChild(innerDiv)
+document.getElementById('display').appendChild(innerDiv)
+// document.body.appendChild(displayDiv)
 })
 
 }
