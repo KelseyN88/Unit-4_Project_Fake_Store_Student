@@ -43,10 +43,13 @@ womensClothing.addEventListener('click', () => {
 
 const displayCards = () => {
 
+    const displayContainer = document.getElementById('display')
+    displayContainer.innerHTML = ''
+
 storedItems.forEach(item => {
 
+    
 // Create elements
-// const displayDiv = document.createElement('div');
 const innerDiv = document.createElement('div');
 const columnDiv = document.createElement('div');
 
@@ -63,7 +66,7 @@ const accordionButton1 = document.createElement('button');
 const accordionCollapse1 = document.createElement('div');
 const accordionBody1 = document.createElement('div');
 
-const accordionDiv2 = document.createElement('div'); // was not reading
+const accordionDiv2 = document.createElement('div');
 const accordionItem2 = document.createElement('div');
 const accordionHeader2 = document.createElement('h2');
 const accordionButton2 = document.createElement('button');
@@ -77,10 +80,6 @@ const addToCartButton = document.createElement('button');
 
 
 // Set Attributes
-// displayDiv.className = 'display';
-// found .classList and it seemed helpful for manipulating classes easily, especially for accordian
-// innerDiv.classList.add('row', 'row-cols-1', 'row-cols-md-2', 'g-4');
-// innerDiv.style.maxWidth = '36rem';
 columnDiv.classList.add('col');
 
 cardDiv.classList.add('card');
@@ -158,14 +157,12 @@ cardDiv.appendChild(cardImage);
 cardDiv.appendChild(cardBodyDiv);
 columnDiv.appendChild(cardDiv);
 innerDiv.appendChild(columnDiv);
-// displayDiv.appendChild(innerDiv)
+
 document.getElementById('display').appendChild(innerDiv)
-// document.body.appendChild(displayDiv)
+
 })
 
 }
-
-
 
 //Keep at the bottom of file
 window.onload = async function() {
@@ -175,4 +172,3 @@ window.onload = async function() {
     // Invoke fakeStore function with the endpoint argument
     await fakeStore(endpoint);
   };
-
